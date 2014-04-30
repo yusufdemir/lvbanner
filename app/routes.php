@@ -25,6 +25,6 @@ Route::get('/', function()
 	Route::post('auth/register', array('uses' => 'UserController@registerUser'));
 	
 	Route::get('auth/login', array('uses' => 'UserController@showLoginForm'));
-	Route::post('auth/login', array('uses' => 'UserController@loginUser'));
+	Route::post('auth/login', array('uses' => 'UserController@loginUser')); 
 	
 	Route::get('auth/logout', array('uses' => 'UserController@doLogout'));

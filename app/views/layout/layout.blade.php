@@ -45,10 +45,12 @@
         
         
         <div id="contents">
-        	@yield('content')
-
+            @if(Session::has('message'))
+                <p class="alert">{{ Session::get('message') }}</p>
+            @endif        	
             
-        </div><!--END CONTENTS-->
+            @yield('content')
+		</div><!--END CONTENTS-->
     
     
     </div><!--END MAIN-->

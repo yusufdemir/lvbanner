@@ -10,20 +10,17 @@
                 	Üyelik Formu
                 </div>
                 <div class="data">
-                    {{ Form::open(array('url'=>'auth/register', 'class'=>'form-signup')) }}
+                    {{ Form::open(array('url'=>'auth/login', 'class'=>'form-signup')) }}
                         <ul>
                             @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
                             @endforeach
                         </ul>
                      <div class="register-form">
-                        {{ Form::text('name', null, array('class'=>'form-control', 'placeholder'=>'Adınız Soyadınız')) }}
-                        {{ Form::text('username', null, array('class'=>'form-control', 'placeholder'=>'Kullanıcı Adınız')) }}
                         {{ Form::text('email', null, array('class'=>'form-control', 'placeholder'=>'Email Adresiniz')) }}
                         {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Şifreniz')) }}
-                        {{ Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>'Tekrar Şifreniz')) }}
                      
-                        {{ Form::submit('Kayıt Ol', array('class'=>'btn btn-large btn-primary btn-block'))}}
+                        {{ Form::submit('Giriş Yap!', array('class'=>'btn btn-large btn-primary btn-block'))}}
                      </div>
                     {{ Form::close() }}
                 </div>
